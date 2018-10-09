@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    {{ partial "head.html" . }}  
+
+  </head>
+
+  <body class="people">
+
+    <header>
+  
+        {{ partial "header.html" . }}  
+
+    </header>
+
+    <main class="content--container">
+
+        <div class="bioHeader">
+            <div class="bioName">
+                <h1>{{ .Title }}</h1>
+            </div>
+
+            <div class="bioImage">
+                {{ with .Resources.Match "portrait" }}
+                    {{ range . }}
+                        <img src="{{ .RelPermalink }}" alt="{{.Title}}" />
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+
+        <div class="peoplePracticeAreas">
+            <ul>
+                <li class="black">Practice Areas</li>
+                <li>|</li>
+                {{ range .Params.tags }}
+                <li class="white">{{ . }}</li>
+                {{ end }}
+            </ul>
+        </div>
+
+        <section class="content--full bioContent">
+        
+            <aside>
+            
+                <h2 class="teal">Email</h2>
+                <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>
+        
+                <h2 class="teal">Education</h2>
+                <ul>
+                    {{ range .Params.education }}
+                    <li>{{ . | markdownify }}</li>
+                    {{ end }}
+                </ul>
+
+                <h2 class="teal">Bar Admissions</h2>
+                <ul>
+                    {{ range .Params.barAdmissions }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+
+            </aside>
+
+            <div>
+                {{ .Content }}
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+    {{ partial "footer.html" . }}
+   
+    </footer>
+
+  </body>
+
+</html>

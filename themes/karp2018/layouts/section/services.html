@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        {{ partial "head.html" . }}  
+
+    </head>
+
+<body>
+    
+    <header>
+  
+        {{ partial "header.html" . }}  
+
+    </header>
+
+    <main class="content--container">
+
+        <section class="servicesHero">
+            
+            <div class="content--full">
+                {{ .Content }}
+            </div>
+            
+        </section>
+         
+        <section class="servicesCards content--full">
+            
+            {{ range .Pages.ByWeight }}
+            <div class="card">
+                <div class="cardHeader">
+                        <h3>{{ .Title }}</h3>
+                    {{ with .Resources.Match "feature" }}
+                            {{ range . }}
+                        {{ $scaled :=  .Fill "300x150 q100 Lanczos"}}
+                    
+                        <img src="{{ $scaled.RelPermalink }}" alt="{{.Title}}" />
+                    {{ end }}
+               {{end }}
+                
+                    
+                </div>
+                    <div class="cardContent">
+                        {{ .Content }}
+                    </div>
+                </div>
+            {{ end }}
+        </section>
+
+    </main>
+
+    <footer>
+
+        {{ partial "footer.html" . }}
+
+    </footer>
+
+</body>
+
+</html>

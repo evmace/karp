@@ -1,0 +1,8 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Karp & Langerman"
+theme = "karp2018"
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"

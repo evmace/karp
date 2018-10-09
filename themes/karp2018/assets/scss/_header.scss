@@ -1,0 +1,92 @@
+header {
+    display: flex;
+    font-family: $reg;
+    height: 125px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5%;
+    font-size: 1em;
+    
+    @include mobile {
+        flex-direction: column;
+        margin: 20px;
+        height: 100px;
+    }
+
+    a:hover {
+        color: $teal;
+    }
+
+    ul {
+        display: flex;
+        width: 300px;
+        justify-content: space-between;
+    }
+
+    li {
+        list-style: none;
+
+        @include mobile {
+            padding: 10px;
+        }
+    }
+
+    img {
+        height: 60px;
+        width: auto;
+
+        @include mobile {
+            width: 250px;
+            height: auto;
+        }
+    }
+}
+
+// People Dropdown
+
+.dropDown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    
+
+    &:focus {
+        pointer-events: none;
+        outline: none;
+    }
+
+    &:focus > ul {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    ul {
+        margin-top: 1em;
+        flex-direction: column;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1;
+        background-color: $white;
+        padding: 2em;
+        right: 0;
+        box-shadow: $shadow;
+        transition: all .2s;
+        max-width: 150px;
+
+        li {
+            padding-left: 0;
+            margin-bottom: 1em;
+            text-align: right;
+
+            &:hover {
+                color: $teal;
+            }
+
+        }
+
+        
+    }
+
+}

@@ -1,0 +1,111 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, button, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time,
+mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+html, body {
+  height: 100%;
+  margin: 0; }
+
+body,
+input,
+select {
+  padding: 0;
+  margin: 0; }
+
+.teal {
+  color: #55ABB6; }
+
+.blue {
+  color: #14213D; }
+
+.black {
+  color: #011502; }
+
+html {
+  font-size: 16px; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "trade-gothic-next", sans-serif; }
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1em; }
+
+h2 {
+  font-size: 3rem;
+  margin: 1em 0 .5em 0; }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 3.5rem; } }
+
+h3 {
+  font-size: 2rem;
+  margin: 10px 0;
+  line-height: 2; }
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 2.5rem; } }
+
+h4 {
+  font-size: 1.5rem; }
+
+p {
+  margin-bottom: 1em;
+  line-height: 1.6em;
+  font-family: "trade-gothic-next", sans-serif;
+  letter-spacing: .1em;
+  font-size: 1rem; }
+
+b,
+strong {
+  font-weight: 800; }
+
+em,
+i {
+  font-style: italic; }
+
+header img {
+  height: 60px;
+  width: auto; }
+
+footer {
+  background-color: #14213D; }

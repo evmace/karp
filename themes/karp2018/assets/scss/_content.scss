@@ -1,0 +1,307 @@
+//Home
+
+.homeHeroContainer {
+	height: 400px;
+    background: linear-gradient(to bottom, $blue, $black);
+}
+
+.homeHeroContent {
+    display: flex;
+    color: $white;
+    justify-content: space-between;
+
+    h1 {
+        font-size: 4rem;
+        
+        margin: 0;
+    }
+
+    h2 {
+        width: 30%;
+        font-size: 1.5rem;
+        margin-top: .5em;
+    }
+
+}
+
+.primaryPracticeContainer {
+    background: $white;
+    height: 450px;
+    margin-top: -150px !important;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: $shadow;
+    padding: 0;
+}
+
+.primaryPracticeContent {
+    color: $white;
+    position: absolute;
+    bottom: 0;
+    padding: 40px;
+}
+
+.primaryPractice {
+    position: relative;
+    width: 50%;
+
+    h3 {
+        font-size: 2rem;
+        position: absolute;
+        padding: 40px;
+        color: $white;
+    }
+
+    h4 {
+        font-family: $cond;
+        font-size: 1.2rem;
+    }
+
+    p.action {
+        text-transform: uppercase;
+        color: $white;
+    }
+
+    p.action > img {
+        height: .8em;
+    }
+}
+
+.secondaryPracticeContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.secondaryPractice {
+    width: 30%;
+
+    h3 {
+        padding-top: .5em;
+    }
+
+    h3 > img {
+        height: .6em;
+    }
+}
+
+#tax {
+    border-top: 4px solid #6AB37E;
+}
+
+#real-estate {
+    border-top: 4px solid #2A5C92;
+}
+
+#compliance {
+    border-top: 4px solid #503D82;
+}
+
+.aboutKarpLangerman {
+
+    display: flex;
+    justify-content: space-evenly;
+
+	div {
+		display: flex;
+		width: 50%;
+    }
+    
+    p {
+        width: 50%;
+        padding: 0 1em;
+    }
+}
+
+// Services
+
+.servicesHero {
+    background: linear-gradient(to bottom, $blue, $black);
+    padding-bottom: 150px;
+    position: relative;
+
+    h1, h2 {
+        color: $white;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        font-family: $cond;
+        font-weight: normal;
+    }
+}
+
+.servicesCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -200px !important;
+}
+
+.card {
+    box-shadow: $shadow;
+    background-color: $white;
+    width: 300px;
+    margin: 5%;  
+}
+
+.cardHeader {
+    height: 150px;
+    position: relative;
+
+    img {
+        z-index: -1;
+    }
+
+    h3 {
+        position: absolute;
+        color: $white;
+        padding: 0 1em;
+        bottom: 0;
+    }
+}
+
+.cardContent {
+
+    padding: 2em 2em 2em 2.8em;
+
+        ul {
+            list-style-position: outside;
+            margin-left: 0;
+            padding-left: 0;
+            text-indent: -.8em;
+        }
+
+        li {
+            padding: .5em 0;
+        }
+
+        li:before {
+            content: '+ ';
+        }
+}
+
+
+//People
+
+.people {
+
+    h1 {
+        font-size: 3rem;
+
+        @include mobile {
+            font-size: 2rem;
+        }
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h2:first-child {
+        margin-top: 0;
+    }
+}
+
+.peoplePracticeAreas {
+	background-color: $teal;
+	width: 100%;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-family: $cond;
+    
+
+	ul {
+		display: flex;
+        align-content: space-evenly;
+        padding: 1em 5%;
+	}
+
+	li {
+		margin-right: 1em;
+	}
+
+}
+
+.bioHeader {
+    display: flex;
+	height: 300px;
+    width: 100%;
+    
+    @include mobile {
+        flex-direction: column-reverse;
+    }
+}
+
+.bioImage {
+    
+	img {
+		height: 300px;
+        width: 400px;
+        
+        @include mobile {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+	}
+}
+
+.bioName {
+    background: linear-gradient(to bottom, $blue, $black);
+    padding: 0 0 2em 5%;
+	color: $teal;
+    width: 100%;
+    display: flex;
+
+    @include mobile {
+        display: block;
+        padding: 0;
+    }
+
+    h1 {
+        align-self: flex-end;
+        padding: 20px;
+    }
+
+}
+
+.bioContent {
+
+    display: flex;
+
+    @include mobile {
+        flex-direction: column-reverse;
+        max-width: 280px;
+    }
+
+    
+    aside {
+        flex-basis: 40%;
+        font-size: .8rem;
+        flex-grow: 1;
+        max-width: 280px;
+        margin-right: 5%;
+
+        @include mobile {
+             
+        }
+
+        li {
+            margin-bottom: 1em;
+        }
+
+        a {
+            border-bottom: 1px $offwhite solid;
+        }
+    }
+
+    div {
+        flex-basis: 40%;
+        flex-shrink: 2;
+        
+        p {
+            font-size: 1.3rem;
+            line-height: 1.7;
+        }
+    }
+}

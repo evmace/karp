@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    {{ partial "head.html" . }}  
+
+  </head>
+
+  <body>
+    
+    <header>
+  
+        {{ partial "header.html" . }}  
+
+    </header>
+
+    <main class="content--container">
+      
+        <section class="homeHeroContainer">
+            <div class="homeHeroContent content--full">
+                {{ .Content }}
+            </div>
+        </section>
+
+        <section class="primaryPracticeContainer content--full">
+
+            <div class="primaryPractice">
+                    {{ with .Site.GetPage "/services/corporate" }}
+                    <h3>{{ .Title }}</h3>
+                <div class="primaryPracticeContent">
+                    
+                        <h4>{{ .Param "subtitle" }}</h4>
+                    <p class="action">Learn More <img src="/img/arrow-white.svg" /></p>
+               
+                </div>
+                        {{ with .Resources.Match "feature" }}
+                            {{ range . }}
+                        {{ $scaled :=  .Resize "450x450 q100 Lanczos"}}
+                    
+                        <img src="{{ $scaled.RelPermalink }}" alt="{{.Title}}" />
+                    {{ end }}
+                    {{ end }}
+                {{ end }}
+
+                
+            </div>
+
+            <div class="primaryPractice">
+                    {{ with .Site.GetPage "/services/trusts-and-estates" }}
+                    <h3>{{ .Title }}</h3>
+                    <div class="primaryPracticeContent">
+                
+                    <h4>{{ .Param "subtitle" }}</h4>
+                    <p class="action">Learn More <img src="/img/arrow-white.svg" /></p>
+                    </div>
+                    {{ with .Resources.Match "feature" }}
+                            {{ range . }}
+                        {{ $scaled :=  .Resize "450x450 q100 Lanczos"}}
+                    
+                        <img src="{{ $scaled.RelPermalink }}" alt="{{.Title}}" />
+                    {{ end }}
+                    {{ end }}
+                {{ end }}
+            </div>
+
+        </section>
+
+        <section class="secondaryPracticeContainer content--full">
+
+                <div class="secondaryPractice">
+                    {{ with .Site.GetPage "/services/tax" }}
+                    <a href="/services"><h3 id="tax">{{ .Title }} <img src="/img/arrow.svg" /> </h3></a>
+                    {{ end }}
+                </div>
+        
+                <div class="secondaryPractice">
+                    {{ with .Site.GetPage "/services/real-estate" }}
+                    <a href="/services"><h3 id="real-estate">{{ .Title }} <img src="/img/arrow.svg" /> </h3></a>
+                    {{ end }}
+                </div>
+        
+                <div class="secondaryPractice">
+                    {{ with .Site.GetPage "/services/customer-compliance" }}
+                        <a href="/services"><h3 id="compliance">{{ .Title }} <img src="/img/arrow.svg" /> </h3></a>
+                    {{ end }}
+                </div>
+
+        </section>
+
+      <section class="aboutKarpLangerman content--full">
+
+        <div>
+          <h3 class="teal">What Drives Us</h3>
+          <p>At Karp & Langerman we are committed to excellence. Continuously evolving to meet the needs of our clients, we know there is no subsitute for forward-looking work done with an attention to detail.</p>
+        </div>
+
+        <div>
+            <h3 class="teal">Firm History</h3>
+            <p>For over 30 years, we have aligned ourselves with our clients, making their interests our own.</p>
+          </div>
+      </section>
+      
+    </main>
+
+    <footer>
+
+    {{ partial "footer.html" . }}
+   
+    </footer>
+
+  </body>
+
+</html>

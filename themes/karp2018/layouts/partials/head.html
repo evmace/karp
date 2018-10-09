@@ -1,0 +1,11 @@
+<meta charset='utf-8' />
+<meta name='description' content="Karp & Langerman, P.C. are thought leaders drafting original and ground breaking solutions." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+{{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint}}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+<link rel="stylesheet" href="https://use.typekit.net/vcc1tkd.css">
+
+<title>
+    Karp & Langerman
+</title>

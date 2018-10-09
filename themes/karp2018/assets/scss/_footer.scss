@@ -1,0 +1,43 @@
+footer {
+    font-family: $reg;
+    background-color: $black;
+    padding: 2em 5%;
+
+    p {
+        color: $white;
+    }
+
+    a {
+        color: $white;
+        border-bottom: 1px solid $offwhite;
+    }
+}
+
+.officeLocations {
+    display: flex;
+    flex-wrap: wrap;
+
+    p {
+        font-family: $cond;
+    }
+
+    div {
+        display: flex;
+
+        @include mobile {
+            display: block;
+        }
+
+        p:first-child {
+            margin-right: 2em;
+        }
+
+        p:last-child {
+            margin-right: 4em;
+        }
+    }
+}
+
+.footerDisclaimer {
+    font-size: .7rem;
+}

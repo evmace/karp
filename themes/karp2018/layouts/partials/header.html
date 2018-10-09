@@ -1,0 +1,19 @@
+
+<a href="/"><img src="/img/kl-logo.svg" alt="Karp & Langerman, P.C."></a>
+
+<nav role="navigation">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li tabindex="0" class="dropDown"><a href="#">People</a>
+            
+            <ul>
+               
+                {{ range where .Site.Pages "Section" "people" }}
+                    <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+                {{ end }}
+                
+            </ul>
+        </li>
+    </ul>
+</nav>
